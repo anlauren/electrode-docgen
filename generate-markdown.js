@@ -12,6 +12,10 @@ handlebars.registerHelper('defaultProp', function(options) {
   return str.length > 0 ? '`' + str + '`' : "";
 });
 
+handlebars.registerHelper('ternary', function(test, yes, no) {
+  return test ? yes : no;
+});
+
 function _generateDevPortal(comp) {
   var templateSource = fs.readFileSync(__dirname + '/templates/dev-portal.hbs');
   var template = handlebars.compile(templateSource.toString(), {noEscape: true});
