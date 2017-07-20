@@ -1,12 +1,11 @@
-## {{component}}
-
+## {{displayName}}
 {{description}}
 
 {{#if hasProps}}
 ### Properties
 
-| Property | Type | Description | Default |
-| -------- | ---- | ----------- | ------- |
+| Property | Type | Description | Default | Required |
+| -------- | ---- | ----------- | ------- | -------- |
 {{#each props}}
 | *{{@key}}* | {{ternary flowType flowType.name type.name}} | {{description}} | {{#defaultProp}}{{defaultValue.value}}{{/defaultProp}}
 {{/each}}
